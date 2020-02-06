@@ -39,6 +39,19 @@ class PokedexCell: UICollectionViewCell {
     
     // MARK: - Init
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        configureViewComponents()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Selectors
+    
+    
     // MARK: - Helper Functions
     
     func configureViewComponents() {
