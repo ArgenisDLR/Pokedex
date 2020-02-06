@@ -22,8 +22,14 @@ class PokedexController: UICollectionViewController {
         super.viewDidLoad()
 
 
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        configureViewComponents()
+    
+    }
+    
+    // MARK: - Helper Functions
+    
+    func configureViewComponents() {
+        
         
     }
 
