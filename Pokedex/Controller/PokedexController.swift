@@ -30,17 +30,14 @@ class PokedexController: UICollectionViewController {
     
     func configureViewComponents() {
         
+        collectionView.backgroundColor = .white
+        
         
     }
 
+}
 
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        return 1
-    }
-
+extension PokedexController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -49,11 +46,17 @@ class PokedexController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PokedexCell
         
+        cell.backgroundColor = .blue
     
         return cell
     }
+}
 
+extension PokedexController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        <#code#>
+    }
 }
