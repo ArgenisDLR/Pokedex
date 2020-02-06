@@ -20,8 +20,7 @@ class PokedexController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
         configureViewComponents()
     
     }
@@ -56,7 +55,8 @@ extension PokedexController {
 
 extension PokedexController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        <#code#>
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        
+//        return
+//    }
 }

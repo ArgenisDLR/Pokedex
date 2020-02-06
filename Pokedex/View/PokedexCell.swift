@@ -57,6 +57,9 @@ class PokedexCell: UICollectionViewCell {
     func configureViewComponents() {
         
         self.layer.cornerRadius = 10
+        
+        addSubview(imageView)
+        imageView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: self.frame.height - 32)
     }
     
 }
