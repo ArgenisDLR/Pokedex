@@ -59,9 +59,6 @@ class Pokemon {
             self.type = type.capitalized
         }
         
-        if let evolutionChain = dictionary["evolutionChain"] as? [[String: AnyObject]] {
-            self.evolutionChain = evolutionChain
-        }
     }
 }
 
