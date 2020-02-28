@@ -24,6 +24,8 @@ class PokedexController: UICollectionViewController {
         super.viewDidLoad()
         
         configureViewComponents()
+        
+        collectionView.register(PokedexCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     
     }
     
@@ -50,8 +52,6 @@ class PokedexController: UICollectionViewController {
         
     }
     
-
-
 }
 
 extension PokedexController {

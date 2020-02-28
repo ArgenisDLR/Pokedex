@@ -58,7 +58,6 @@ class Pokemon {
         if let type = dictionary["type"] as? String {
             self.type = type.capitalized
         }
-        
     }
 }
 
