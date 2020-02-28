@@ -49,16 +49,17 @@ class PokedexController: UICollectionViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showSearchBar))
         navigationItem.rightBarButtonItem?.tintColor = .white
         
-        
     }
     
 }
+
+// MARK: - UICollectionView Delegate / Data Source
 
 extension PokedexController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 6
+        return 151
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -71,10 +72,18 @@ extension PokedexController {
     }
 }
 
+// MARK: - UICollectionView Delegate Flow Layout : changing cell sizes and margins
+
 extension PokedexController: UICollectionViewDelegateFlowLayout {
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        
-//        return
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 16, left: 8, bottom: 8, right: 8)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = (view.frame.width - 36) / 3
+        return CGSize(width: width, height: width)
+    }
 }
